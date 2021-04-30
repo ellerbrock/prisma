@@ -261,6 +261,12 @@ You may have to run ${chalk.greenBright(
         }
       }
       if (this.QueryEngine) {
+        console.warn({
+          datamodelPath: this.config.datamodelPath,
+          configDir: this.config.cwd!,
+          datasourceOverrides: this.datasourceOverrides,
+          datamodel: this.datamodel,
+        })
         try {
           this.engine = new this.QueryEngine(
             {
